@@ -1,12 +1,11 @@
-var gimme = function (inputArray) {
-  var ar = [];
-  for(var i = 0; i < 3; i++){
-    ar[i] = inputArray[i];  
+function squareDigits(num){
+  var resultat = '';
+  var result = String(num);
+  for(i = 0; i < result.length; i++){
+    resultic = String((Number(result.charAt(i)))**2);
+    resultat += resultic;
   }
-  ar.sort(function(a, b) {
-    return a - b;
-  });
-  return inputArray.indexOf(ar[0])
-};
+  return Number(resultat);
+}
 
-console.log(gimme([5, 10, 14]));
+console.log(squareDigits(3234));
